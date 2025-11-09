@@ -7,15 +7,13 @@ dotenv.config();
 
 let initialized = false;
 
-async function bootstrap() {
+const handler = async (req: any, res: any) => {
   if (!initialized) {
     await connectDB();
     initialized = true;
   }
-}
-
-export default async function handler(req: any, res: any) {
-  await bootstrap();
   const expressHandler = serverless(app);
   return expressHandler(req, res);
-}
+};
+
+export default handler;
