@@ -25,6 +25,7 @@
     "@types/node": "^20.10.3",
     "@types/bcrypt": "^5.0.0",
     "@types/randomstring": "^1.1.4",
-    "@types/express-session": "^1.17.7"
+    "@types/express-session": "^1.17.7",
+    "@vercel/node": "^1.12.0"
   }
 }
