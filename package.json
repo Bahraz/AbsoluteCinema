@@ -1,11 +1,11 @@
 {
   "name": "rest-api-project",
   "version": "1.0.1",
-  "main": "dist/server.js",
+  "main": "dist/server.ts",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.ts"
   },
   "dependencies": {
     "express": "^4.18.2",
