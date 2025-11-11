@@ -1,9 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "src/server.mts", "use": "@vercel/node" }
+    { "src": "src/server.ts", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "src/server.mts" }
+    { "src": "/(.*)", "dest": "src/server.ts" }
   ]
 }
