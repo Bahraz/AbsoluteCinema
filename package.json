@@ -1,11 +1,14 @@
 {
   "name": "rest-api-project",
   "version": "1.0.1",
+  "type": "module",
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -25,5 +28,8 @@
     "@types/bcrypt": "^5.0.0",
     "@types/randomstring": "^1.1.4",
     "@types/express-session": "^1.17.7"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
