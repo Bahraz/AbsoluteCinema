@@ -1,7 +1,7 @@
 {
   "name": "rest-api-project",
   "version": "1.0.1",
-  "main": "dist/server.js",
+  "main": "dist/app.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts",
     "build": "tsc",
