@@ -1,13 +1,13 @@
 {
   "name": "rest-api-project",
   "version": "1.0.1",
-  "type": "module",
-  "main": "dist/server.ts",
+  "type": "commonjs",
+  "main": "dist/server.mts",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts",
+    "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.mts",
     "build": "tsc",
     "start": "node dist/server.ts",
-    "lint": "eslint . --ext .ts",
+    "lint": "eslint . --ext .mts",
     "format": "prettier --write ."
   },
   "dependencies": {
