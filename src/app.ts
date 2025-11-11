@@ -6,6 +6,7 @@ const app = express();
 app.use(express.json());
 
 // Jeden główny punkt wejścia dla całego API:
+app.use('/', (req, res) => res.send('Welcome to Absolute Cinema API'));
 app.use('/api', routes);
 
 export default app;
