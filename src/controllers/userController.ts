@@ -1,11 +1,11 @@
 import type { Request, Response, NextFunction } from "express";
 
-import { User } from "../models/userModel";
+import { User } from "@models/userModel";
 
 export class UserController {
   async showUsers(req: Request, res: Response) {
     try {
-      const users = await User.find({}, "name");
+      const users = await User.find({}, "name surname email");
       res.json(users);
     } catch (err: unknown) {
       const error = err instanceof Error ? err.message : "Nieznany błąd";
@@ -16,8 +16,10 @@ export class UserController {
   async register(req: Request, res: Response) {
     const user = new User({
       name: req.body.name,
+      surname: req.body.surname,
       password: req.body.password,
       email: req.body.email,
+      created_at: new Date(),
     });
 
     try {

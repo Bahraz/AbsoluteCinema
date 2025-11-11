@@ -4,7 +4,6 @@ import randomstring from 'randomstring';
 
 export interface IUser extends Document {
   name: string;
-  name2?: string;
   surname?: string;
   email: string;
   password: string;
@@ -16,7 +15,6 @@ export interface IUser extends Document {
 const UserSchema: Schema<IUser> = new Schema(
   {
     name: { type: String, required: true, trim: true, minlength: 3 },
-    name2: { type: String },
     surname: { type: String },
     email: { type: String, required: true, unique: true, lowercase: true, trim: true },
     password: { type: String, required: true, minlength: 6 },
