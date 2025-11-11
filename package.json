@@ -4,12 +4,12 @@
   "type": "module",
   "main": "dist/server.ts",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts",
+    "dev": "ts-node-dev src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.ts",
+    "start": "node dist/server.js",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write .",
-    "vercel-build": "tsc"
+    "vercel-build": "npm run build"
   },
   "dependencies": {
     "axios": "^1.6.2",
